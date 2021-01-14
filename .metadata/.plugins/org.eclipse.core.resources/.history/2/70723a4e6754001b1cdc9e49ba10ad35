@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost/db_produtos?useSSL=false&amp;serverTimezone=UTC-apirest
+spring.datasource.username=postgres
+spring.datasource.password=banco123
+spring.jpa.hibernate.ddl-auto=update

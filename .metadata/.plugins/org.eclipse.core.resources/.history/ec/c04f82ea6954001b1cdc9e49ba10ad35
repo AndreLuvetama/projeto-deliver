@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost/db_produtos?useSSL=false&amp;serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=ra123
+spring.jpa.hibernate.ddl-auto=update
