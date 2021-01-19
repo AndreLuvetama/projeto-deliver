@@ -45,12 +45,5 @@ public class OrdemServicos {
 		ordem = ordemRepositorio.save(ordem);
 		return new OrdemDTO(ordem);
 	}
-	
-	@Transactional
-	public OrdemDTO setDelivered(Long id) {
-		Ordem ordem = ordemRepositorio.getOne(id);
-		ordem.setStatus(OrdemStatus.ENTREGUE);
-		ordem = ordemRepositorio.save(ordem);
-		return new OrdemDTO(ordem);
-	}
+
 }
