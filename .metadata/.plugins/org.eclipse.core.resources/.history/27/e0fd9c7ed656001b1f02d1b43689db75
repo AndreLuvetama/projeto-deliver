@@ -1,0 +1,20 @@
+package com.deliver.servicos;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.deliver.dto.ProdutosDTO;
+import com.deliver.repositorio.ProdutoRepositorio;
+
+@Service
+public class ProdutosServicos {
+	
+	@Autowired
+	private ProdutoRepositorio produtoRepositorio;
+	public List<ProdutosDTO> findAll(){
+		
+	}
+
+}

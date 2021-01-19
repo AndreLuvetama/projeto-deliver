@@ -1,0 +1,36 @@
+package com.deliver.dto;
+
+import java.io.Serializable;
+
+import com.deliver.model.Produtos;
+
+public class ProdutosDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+		
+	private Long id;
+	private String nome;
+	private String descricao;
+	private String imageUri; 
+	private Double preco; 
+	
+	public ProdutosDTO() {}
+
+	public ProdutosDTO(Long id, String nome, String descricao, String imageUri, Double preco) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.imageUri = imageUri;
+		this.preco = preco;
+	}
+	
+	
+	public ProdutosDTO(Produtos entidade) {
+		id = entidade.getId();
+	    nome = entidade.getNome();
+		descricao = entidade.getDescricao();
+		imageUri = entidade.getImageUri();
+		preco = entidade.getPreco();
+	}
+
+}
