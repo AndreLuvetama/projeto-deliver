@@ -12,7 +12,6 @@ import com.deliver.dto.OrdemDTO;
 import com.deliver.dto.ProdutosDTO;
 import com.deliver.model.Ordem;
 import com.deliver.model.OrdemStatus;
-import com.deliver.model.Produtos;
 import com.deliver.repositorio.OrdemRepositorio;
 import com.deliver.repositorio.ProdutoRepositorio;
 
@@ -33,17 +32,15 @@ public class OrdemServicos {
 				
 	}
 
-	@Transactional()
+	@Transactional(readOnly=true)
 	public OrdemDTO insert(OrdemDTO dto) {
 		Ordem ordem = new Ordem(null, dto.getEndereco(), dto.getLatitude(), dto.getLongitude(),
 				Instant.now(), OrdemStatus.PENDENTE);
 		
 		for (ProdutosDTO p: dto.getProdutos()) {
-			Produtos produtos = produtoRepositorio.getOne(p.getId());
-			ordem.getProdutos().add(produtos);
+			
 		}
-		ordem = ordemRepositorio.save(ordem);
-		return new OrdemDTO(ordem);
+		
 	}
 
 }

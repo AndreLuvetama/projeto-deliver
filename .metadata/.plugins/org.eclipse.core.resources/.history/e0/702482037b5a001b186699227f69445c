@@ -33,7 +33,7 @@ public class OrdemServicos {
 				
 	}
 
-	@Transactional()
+	@Transactional(readOnly=true)
 	public OrdemDTO insert(OrdemDTO dto) {
 		Ordem ordem = new Ordem(null, dto.getEndereco(), dto.getLatitude(), dto.getLongitude(),
 				Instant.now(), OrdemStatus.PENDENTE);
@@ -42,8 +42,7 @@ public class OrdemServicos {
 			Produtos produtos = produtoRepositorio.getOne(p.getId());
 			ordem.getProdutos().add(produtos);
 		}
-		ordem = ordemRepositorio.save(ordem);
-		return new OrdemDTO(ordem);
+		produtoRepositorio.save(ordem);
 	}
 
 }
