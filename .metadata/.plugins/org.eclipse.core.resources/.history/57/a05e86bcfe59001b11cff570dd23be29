@@ -1,0 +1,10 @@
+package com.deliver.repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deliver.model.Ordem;
+
+
+public interface OrdemRepositorio extends JpaRepository<Ordem, Long> {
+
+}
