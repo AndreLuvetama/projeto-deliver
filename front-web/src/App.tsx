@@ -1,10 +1,10 @@
 import './App.css';
-import Hello from './Hello'; // imporrta o arquivo Hello
+import Navbar from './navbar'; // imporrta o arquivo Navbar
 
 function App() {
   return (
     <div>
-       <Hello/>  
+       <Navbar/>  
     </div>
   );
 }
