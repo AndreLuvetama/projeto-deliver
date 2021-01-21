@@ -1,11 +1,13 @@
 import './App.css';
-import Navbar from './navbar'; // imporrta o arquivo Navbar
+import Home from './Home';
+import Navbar from './Navbar'; // importa o arquivo Navbar
 
 function App() {
   return (
-    <div>
+    <>
        <Navbar/>  
-    </div>
+       <Home />
+    </>
   );
 }
 
