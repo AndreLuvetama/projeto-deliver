@@ -1,0 +1,5 @@
+package com.deliver.habilitaCors;
+
+public class ConfigurationCors {
+
+}

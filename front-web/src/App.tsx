@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './Navbar'; // importa o arquivo Navbar
+// importa o arquivo Navbar
 import Routes from './Routes';
 
 function App() {
